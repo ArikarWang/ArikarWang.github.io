@@ -1,3 +1,5 @@
+npm run build
+
 cd public
 
 git init
