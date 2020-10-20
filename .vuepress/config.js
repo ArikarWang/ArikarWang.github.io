@@ -118,7 +118,7 @@ module.exports = {
           {
             name: '群青',
             artist: 'YOASOBI,Ayase',
-            url: '/audios/YOASOBI、Ayase - 群青.flac',
+            url: '/YOASOBI、Ayase - 群青.flac',
             cover: '/群青.jpg',
           },
         ],
