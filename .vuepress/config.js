@@ -2,6 +2,7 @@ module.exports = {
   title: 'ArikarBlog',
   description: 'ArikarBlog',
   dest: 'public',
+  base: '/arikarblog/',
   head: [
     [
       'link',

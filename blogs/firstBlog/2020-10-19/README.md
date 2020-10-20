@@ -9,4 +9,4 @@ categories:
 sticky: 1
 ---
 
-first page in category2
+Arikar Blog 的第一篇博客
