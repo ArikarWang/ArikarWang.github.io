@@ -25,17 +25,17 @@ module.exports = {
   themeConfig: {
     nav: [
       {
-        text: 'Home',
+        text: '主页',
         link: '/',
         icon: 'reco-home',
       },
       {
-        text: 'TimeLine',
+        text: '时光',
         link: '/timeline/',
         icon: 'reco-date',
       },
       {
-        text: 'Docs',
+        text: '文档',
         icon: 'reco-message',
         items: [
           {
@@ -45,7 +45,7 @@ module.exports = {
         ],
       },
       {
-        text: 'Contact',
+        text: '关于',
         icon: 'reco-message',
         target: '_blank',
         items: [
@@ -64,11 +64,11 @@ module.exports = {
     blogConfig: {
       category: {
         location: 2,
-        text: 'firstBlog',
+        text: '博客',
       },
       tag: {
         location: 3,
-        text: 'blog',
+        text: '杂谈',
       },
     },
     friendLink: [
@@ -118,8 +118,32 @@ module.exports = {
           {
             name: '群青',
             artist: 'YOASOBI,Ayase',
-            url: '/YOASOBI、Ayase - 群青.flac',
-            cover: '/群青.jpg',
+            url: '/arikarblog/YOASOBI、Ayase - 群青.flac',
+            cover: '/arikarblog/群青.jpg',
+          },
+          {
+            name: 'あの夢をなぞって (描绘着那个梦想)',
+            artist: 'YOASOBI',
+            url: '/arikarblog/YOASOBI - あの夢をなぞって (描绘着那个梦想).flac',
+            cover: '/arikarblog/あの夢をなぞって (描绘着那个梦想).jpg',
+          },
+          {
+            name: 'ハルジオン (春紫菀)',
+            artist: 'YOASOBI',
+            url: '/arikarblog/YOASOBI - ハルジオン (春紫菀).flac',
+            cover: '/arikarblog/ハルジオン (春紫菀).jpg',
+          },
+          {
+            name: 'たぶん (大概)',
+            artist: 'YOASOBI',
+            url: '/arikarblog/YOASOBI - たぶん (大概).flac',
+            cover: '/arikarblog/たぶん (大概).jpg',
+          },
+          {
+            name: '夜に駆ける (向夜晚奔去)',
+            artist: 'YOASOBI',
+            url: '/arikarblog/YOASOBI - 夜に駆ける (向夜晚奔去).flac',
+            cover: '/arikarblog/夜に駆ける (向夜晚奔去).jpg',
           },
         ],
         autoShrink: true,

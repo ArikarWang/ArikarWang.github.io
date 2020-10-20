@@ -3,9 +3,9 @@ title: my first blog
 date: 2020-10-19
 sidebar: 'auto'
 tags:
- - blog
+ - 杂谈
 categories: 
- - firstBlog
+ - 博客
 sticky: 1
 ---
 
