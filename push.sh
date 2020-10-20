@@ -1,12 +1,5 @@
-npm run build
-
-cd public
-
 git init
-git add -A
-git commit -m 'deploy'
+git add .
+git commit -m 'push'
 
-git push -f git@github.com:ArikarWang/arikarblog.git master
-
-cd ../
-rm -rf public
+git push origin master
