@@ -57,22 +57,16 @@ module.exports = {
         ],
       },
     ],
-    sidebar: {
-      '/docs/theme-reco/': ['', 'theme', 'plugin', 'api'],
-    },
+    sidebar: 'auto',
     type: 'blog',
     blogConfig: {
       category: {
         location: 2,
-        text: '博客',
+        text: '分类',
       },
       tag: {
         location: 3,
-        text: '杂谈',
-      },
-      tag: {
-        location: 4,
-        text: '工具',
+        text: '标签',
       },
     },
     friendLink: [
