@@ -23,10 +23,13 @@ module.exports = {
   temp: '/path/to/@vuepress/core/.temp',
   theme: 'reco',
   themeConfig: {
-    valineConfig: {
-      appId: 'As5zJ2Mjf2XWNzKvx59Yn4u3-gzGzoHsz', // your appId
-      appKey: 'Q6XmAmMubL9FYXrMv1n7Lqbu', // your appKey
-    },
+    // valineConfig: {
+    //   placeholder: '欢迎评论留言',
+    //   visitor: true,
+    //   recordIP: true,
+    //   appId: 'As5zJ2Mjf2XWNzKvx59Yn4u3-gzGzoHsz', // your appId
+    //   appKey: 'Q6XmAmMubL9FYXrMv1n7Lqbu', // your appKey
+    // },
     nav: [
       {
         text: '主页',
@@ -152,16 +155,18 @@ module.exports = {
         shrinkMode: 'mini',
       },
     ],
-    // [
-    //   '@vuepress-reco/vuepress-plugin-comments',
-    //   {
-    //     choosen: 'valine',
-    //     options: {
-    //       el: '#valine-vuepress-comment',
-    //       appId: 'As5zJ2Mjf2XWNzKvx59Yn4u3-gzGzoHsz', // your appId
-    //       appKey: 'Q6XmAmMubL9FYXrMv1n7Lqbu', // your appKey
-    //     },
-    //   },
-    // ],
+    [
+      '@vuepress-reco/comments',
+      {
+        solution: 'valine',
+        options: {
+          placeholder: '欢迎评论留言',
+          visitor: true,
+          recordIP: true,
+          appId: 'As5zJ2Mjf2XWNzKvx59Yn4u3-gzGzoHsz', // your appId
+          appKey: 'Q6XmAmMubL9FYXrMv1n7Lqbu', // your appKey
+        },
+      },
+    ],
   ],
 };
