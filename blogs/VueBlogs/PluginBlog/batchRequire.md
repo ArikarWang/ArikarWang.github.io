@@ -1,5 +1,5 @@
 ---
-title: Vue批量导入组件（require.context）
+title: Vue自动化导入组件（require.context）
 date: 2020-10-22
 subSidebar: true
 tags:
