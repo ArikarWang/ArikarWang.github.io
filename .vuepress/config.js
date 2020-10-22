@@ -23,6 +23,10 @@ module.exports = {
   temp: '/path/to/@vuepress/core/.temp',
   theme: 'reco',
   themeConfig: {
+    valineConfig: {
+      appId: 'As5zJ2Mjf2XWNzKvx59Yn4u3-gzGzoHsz', // your appId
+      appKey: 'Q6XmAmMubL9FYXrMv1n7Lqbu', // your appKey
+    },
     nav: [
       {
         text: '主页',
@@ -102,9 +106,9 @@ module.exports = {
         theme: ['blackCat'],
         clean: false,
         messages: {
-          welcome: 'welcome',
-          home: 'home',
-          theme: 'theme',
+          welcome: '欢迎',
+          home: '首页',
+          theme: '悲观主义是一种态度，一个勇敢的人的态度',
           close: '88',
         },
       },
@@ -148,5 +152,16 @@ module.exports = {
         shrinkMode: 'mini',
       },
     ],
+    // [
+    //   '@vuepress-reco/vuepress-plugin-comments',
+    //   {
+    //     choosen: 'valine',
+    //     options: {
+    //       el: '#valine-vuepress-comment',
+    //       appId: 'As5zJ2Mjf2XWNzKvx59Yn4u3-gzGzoHsz', // your appId
+    //       appKey: 'Q6XmAmMubL9FYXrMv1n7Lqbu', // your appKey
+    //     },
+    //   },
+    // ],
   ],
 };
