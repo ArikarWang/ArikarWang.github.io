@@ -64,7 +64,7 @@ module.exports = {
         ],
       },
     ],
-    sidebar: 'auto',
+    subSidebar: 'auto',
     type: 'blog',
     blogConfig: {
       category: {
@@ -77,6 +77,12 @@ module.exports = {
       },
     },
     friendLink: [
+      {
+        title: '前端学习路线',
+        desc: '好好学习，天天敲代码',
+        email: '',
+        link: 'https://objtube.github.io/front-end-roadmap/#/',
+      },
       {
         title: '午后南杂',
         desc: 'Enjoy when you can, and endure when you must.',
