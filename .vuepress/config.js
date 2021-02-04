@@ -156,6 +156,12 @@ module.exports = {
             url: '/arikarblog/YOASOBI - 夜に駆ける (向夜晚奔去).mp3',
             cover: '/arikarblog/向夜晚奔去.jpg',
           },
+          {
+            name: '广寒谣',
+            artist: '伊格赛听、不靠谱组合',
+            url: '/arikarblog/伊格赛听、不靠谱组合 - 广寒谣.mp3',
+            cover: '',
+          },
         ],
         autoShrink: true,
         shrinkMode: 'mini',
