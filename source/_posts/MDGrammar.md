@@ -1,7 +1,7 @@
 ---
 title: Markdown基本语法1
 date: 2023-03-15 16:28:30
-updated: 2023-03-15 16:28:30
+updated: 2023-03-17 16:43:30
 tags:
   - 工具
 categories:
@@ -9,9 +9,7 @@ categories:
 comments: true
 ---
 
-{% blockquote %}
-Markdown 基本语法使用 123
-{% endblockquote %}
+# Markdown 基本语法使用
 
 <!-- more -->
 
