@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Markdown基本语法 | Arikar小栈</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Markdown 基本语法使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown基本语法">
+<meta property="og:url" content="http://101.132.177.250:1122/2023/03/15/MDGrammar/index.html">
+<meta property="og:site_name" content="Arikar小栈">
+<meta property="og:description" content="Markdown 基本语法使用">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ftp.bmp.ovh/imgs/2020/10/eb2b4c97dfbd5a50.png">
+<meta property="og:image" content="https://ftp.bmp.ovh/imgs/2020/10/5f1efd3128dbabbd.jpg">
+<meta property="og:image" content="https://ftp.bmp.ovh/imgs/2020/10/944a958a649f9d11.png">
+<meta property="article:published_time" content="2023-03-15T08:28:30.000Z">
+<meta property="article:modified_time" content="2023-03-17T08:28:30.000Z">
+<meta property="article:author" content="Arikar Wang">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ftp.bmp.ovh/imgs/2020/10/eb2b4c97dfbd5a50.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Arikar小栈" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Arikar小栈</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://101.132.177.250:1122"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-MDGrammar" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/03/15/MDGrammar/" class="article-date">
+  <time class="dt-published" datetime="2023-03-15T08:28:30.000Z" itemprop="datePublished">2023-03-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Markdown基本语法
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote><p>Markdown 基本语法使用</p>
+</blockquote>
+
+<span id="more"></span>
+
+<h2 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h2><h3 id="1-1-设计理念"><a href="#1-1-设计理念" class="headerlink" title="1.1 设计理念"></a>1.1 设计理念</h3><ul>
+<li>Markdown 易于阅读，方便创作 web 文档，利于各平台无缝分发。</li>
+<li>Markdown 语法灵感最大的来源还是纯文本 email 的格式，完全由标点符号标签组成的纯文本。</li>
+<li>Markdown 文件应该以纯文本形式原样发布，不应该包含标记标签和格式化指令。</li>
+</ul>
+<h3 id="1-2-内联-HTML-语法"><a href="#1-2-内联-HTML-语法" class="headerlink" title="1.2 内联 HTML 语法"></a>1.2 内联 HTML 语法</h3><ul>
+<li>HTML 是一种发布格式，Markdown 是一种创作格式。</li>
+<li>Markdown 语法集合比较小，只是 HTML 标签的一小部分。</li>
+<li>对于 Markdown 中未包含的标签, 可以直接使用 HTML 标签，例如用 HTML <code>&lt;a&gt;</code> 标签替代 Markdown 的链接语法。</li>
+</ul>
+<h3 id="1-3-特殊字符自动转义"><a href="#1-3-特殊字符自动转义" class="headerlink" title="1.3 特殊字符自动转义"></a>1.3 特殊字符自动转义</h3><p>&amp;emsp;在 HTML 中, 有两个字符需要特殊对待: &lt; 和 &amp;，左尖括号用于起始标签。如果你想将它们用作字面量, 你必须将它们转义为字符实体, 例如<code>&amp;lt;</code> 和 <code>&amp;amp;</code>。</p>
+<h2 id="二、行内语法讲解"><a href="#二、行内语法讲解" class="headerlink" title="二、行内语法讲解"></a>二、行内语法讲解</h2><h3 id="2-1-注释的表述"><a href="#2-1-注释的表述" class="headerlink" title="2.1 注释的表述"></a>2.1 注释的表述</h3><ul>
+<li><strong>代码法</strong></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;display: none&quot;</span>&gt;</span>哈哈我是注释，不会在浏览器中显示。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>html 注释</strong></li>
+</ul>
+<p>既然支持 html 语法，那也支持 html 注释，快捷键 comment + &#x2F;。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--哈哈我是注释，不会在浏览器中显示。--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">哈哈我是多段注释，</span></span><br><span class="line"><span class="comment">不会在浏览器中显示。</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>hack 方法</strong></li>
+</ul>
+<p>hack 方法就是利用 markdown 的解析原理来实现注释的。<br>一般有的 markdown 解析器不支持上面的注释方法，这个时候就可以用 hack 方法。<br>hack 方法比上面 2 种方法稳定得多，但是语义化太差。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="comment">//]: # (哈哈我是最强注释，不会在浏览器中显示。)</span></span><br><span class="line">[^_^]: # (哈哈我是最萌注释，不会在浏览器中显示。)</span><br><span class="line">[<span class="comment">//]: &lt;&gt; (哈哈我是注释，不会在浏览器中显示。)</span></span><br><span class="line">[comment]: <span class="language-xml"><span class="tag">&lt;&gt;</span> (哈哈我是注释，不会在浏览器中显示。)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-分级标题、任务列表"><a href="#2-2-分级标题、任务列表" class="headerlink" title="2.2 分级标题、任务列表"></a>2.2 分级标题、任务列表</h3><ul>
+<li><strong>分级标题</strong></li>
+</ul>
+<p>第一种写法：<strong>使用 &#x3D; 和 - 标记一级和二级标题</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是一个一级标题 ============================ 这是一个二级标题</span><br><span class="line">--------------------------------------------------</span><br></pre></td></tr></table></figure>
+
+<p>第二种写法：<strong>使用 # 号标记</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题</span><br><span class="line"><span class="comment">&lt;!--最多6级标题--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>由于用了标记编辑器会把所有标题写到目录大纲中，在这里写的演示标题也会列进去，所以就不演示了。同学们自己在编辑器中观察，很简单，一级标题字号最大，依级递减。</p>
+<ul>
+<li><strong>任务列表</strong></li>
+</ul>
+<p>Markdown 语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 任务一 未做任务 <span class="string">`- + 空格 + [ ]`</span></span><br><span class="line">- [x] 任务二 已做任务 <span class="string">`- + 空格 + [x]`</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<p><img src="https://ftp.bmp.ovh/imgs/2020/10/eb2b4c97dfbd5a50.png"></p>
+<h3 id="2-3-缩进、换行、空行、对齐方式"><a href="#2-3-缩进、换行、空行、对齐方式" class="headerlink" title="2.3 缩进、换行、空行、对齐方式"></a>2.3 缩进、换行、空行、对齐方式</h3><ul>
+<li><strong>首行缩进</strong></li>
+</ul>
+<p>不同特殊占位符所占空白是不一样大的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">【1】 <span class="symbol">&amp;emsp;</span>或<span class="symbol">&amp;#8195;</span> //全角 【2】 <span class="symbol">&amp;ensp;</span>或<span class="symbol">&amp;#8194;</span> //半角 【3】 <span class="symbol">&amp;nbsp;</span>或<span class="symbol">&amp;#160;</span> //半角之半角</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>换行</strong></li>
+</ul>
+<p>由于 markdown 编辑器的不同,可能在一行字后面，直接换行回车，也能实现换行，但是在 Visual Studio Code 上，想要<strong>换行必须得在一行字后面空两个格子才行</strong>。</p>
+<ul>
+<li><strong>空行</strong></li>
+</ul>
+<p>在编辑的时候有多少个空行(只要这一行只有回车或者 space 没有其他的字符就算空行)，在<strong>渲染之后，只隔着一行</strong>。</p>
+<ul>
+<li><strong>对齐方式</strong></li>
+</ul>
+<p>代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span>行中心对齐<span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">&quot;left&quot;</span>&gt;</span>行左对齐<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">&quot;right&quot;</span>&gt;</span>行右对齐<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<center>行中心对齐</center>
+<p align="left">行左对齐</p>
+<p align="right">行右对齐</p>
+
+<h3 id="2-4-斜体、粗体、删除线、下划线"><a href="#2-4-斜体、粗体、删除线、下划线" class="headerlink" title="2.4 斜体、粗体、删除线、下划线"></a>2.4 斜体、粗体、删除线、下划线</h3><p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">*斜体*</span><br><span class="line">_斜体_</span><br><span class="line">**粗体**</span><br><span class="line">__粗体__</span><br><span class="line">***加粗斜体***</span><br><span class="line">___加粗斜体___</span><br><span class="line">~~删除线~~</span><br><span class="line">&lt;u&gt;下划线&lt;/u&gt;</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p><em>斜体</em><br><em>斜体</em><br><strong>粗体</strong><br><strong>粗体</strong><br><strong><em>加粗斜体</em></strong><br><strong><em>加粗斜体</em></strong><br><del>删除线</del><br><u>下划线</u></p>
+<h3 id="2-5-超链接、页内链接、自动链接、注脚"><a href="#2-5-超链接、页内链接、自动链接、注脚" class="headerlink" title="2.5 超链接、页内链接、自动链接、注脚"></a>2.5 超链接、页内链接、自动链接、注脚</h3><ul>
+<li><strong>行内式</strong></li>
+</ul>
+<p>语法说明：</p>
+<p>[]里写链接文字，()里写链接地址, ()中的””中可以为链接指定 title 属性，title 属性可加可不加。<br>title 属性的效果是鼠标悬停在链接上会出现指定的 title 文字，链接地址与 title 前有一个空格。</p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">欢迎阅读 [Markdown基本语法](https://arikarwang.github.io/arikarblog/blogs/MarkdownGrammar/MDGrammar.html &quot;Markdown基本语法&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p>欢迎阅读 <a target="_blank" rel="noopener" href="https://arikarwang.github.io/arikarblog/blogs/MarkdownGrammar/MDGrammar.html" title="Markdown基本语法">Markdown 基本语法</a></p>
+<ul>
+<li><strong>参考式</strong></li>
+</ul>
+<p>参考式超链接一般用在学术论文上面，或者另一种情况，如果某一个链接在文章中多处使用，那么使用引用 的方式创建链接将非常好，它可以让你对链接进行统一的管理。</p>
+<p>语法说明：<br>参考式链接分为两部分，文中的写法 <code>[链接文字][链接标记]</code>，在文本的任意位置添加<code>[链接标记]:链接地址</code>。</p>
+<p>如果链接文字本身可以做为链接标记，你也可以写成<code>[链接文字][]</code><br><code>[链接文字]:链接地址</code>的形式，见代码的最后一行。</p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">我经常去的几个网站[Google][1]、[ArikarBlog][2]。</span><br><span class="line"></span><br><span class="line">[1]:http://www.google.com</span><br><span class="line">[2]:https://arikarwang.github.io/arikarblog/</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p>我经常去的几个网站<a target="_blank" rel="noopener" href="http://www.google.com/">Google</a>、<a target="_blank" rel="noopener" href="https://arikarwang.github.io/arikarblog/">ArikarBlog</a>。</p>
+<ul>
+<li><strong>注脚</strong></li>
+</ul>
+<p>语法说明：</p>
+<p>在需要添加注脚的文字后加上脚注名字<code>[^注脚名字]</code>,称为加注。 然后在文本的任意位置(一般在最后)添加脚注，脚注前必须有对应的脚注名字。</p>
+<p>::: warning 注意<br>经测试注脚与注脚之间必须空一行，不然会失效。成功后会发现，即使你没有把注脚写在文末，经 Markdown 转换后，也会自动归类到文章的最后。<br>:::</p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">使用 Markdown[^1]可以效率的书写文档, 直接转换成 HTML[^2]。</span><br><span class="line"></span><br><span class="line">[^1]:Markdown是一种纯文本标记语言</span><br><span class="line"></span><br><span class="line">[^2]:HyperText Markup Language 超文本标记语言</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p>使用 Markdown[^a]可以效率的书写文档, 直接转换成 HTML。</p>
+<p>[^a]: Markdown 是一种纯文本标记语言</p>
+<!-- [^b]:HyperText Markup Language 超文本标记语言 -->
+
+<ul>
+<li><strong>锚点（页内超链接）</strong></li>
+</ul>
+<p>网页中，锚点其实就是页内超链接，也就是链接本文档内部的某些元素，实现当前页面中的跳转。比如我这里写下一个锚点，点击回到目录，就能跳转到目录。 在目录中点击这一节，就能跳过来。还有下一节的注脚。这些根本上都是用锚点来实现的。</p>
+<p>::: warning 注意<br>Markdown Extra 只支持在标题后插入锚点，其它地方无效。<br>:::</p>
+<p><strong>语法描述：</strong><br>在你准备跳转到的指定标题后插入锚点 <code>&#123; #标记 &#125;</code> ，然后在文档的其它地方写上连接到锚点的链接。</p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 0. 目录&#123;#index&#125;</span><br><span class="line">跳转到[目录](#index)</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p>跳转到<a href="#index">目录</a></p>
+<ul>
+<li><strong>自动链接</strong></li>
+</ul>
+<p><strong>语法说明：</strong><br>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用&lt;&gt;包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如：</p>
+<p>代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://example.com/&gt;</span><br><span class="line">&lt;address@example.com&gt;&lt;/address@example.com&gt;</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p><a target="_blank" rel="noopener" href="https://arikarwang.github.io/arikarblog/">https://arikarwang.github.io/arikarblog/</a><br><a target="_blank" rel="noopener" href="https://github.com/ArikarWang">https://github.com/ArikarWang</a></p>
+<h3 id="2-6-无序列表、有序列表、定义型列表"><a href="#2-6-无序列表、有序列表、定义型列表" class="headerlink" title="2.6 无序列表、有序列表、定义型列表"></a>2.6 无序列表、有序列表、定义型列表</h3><ul>
+<li><strong>无序列表</strong></li>
+</ul>
+<p>使用 *，+，- 表示无序列表。</p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 无序列表项 一</span><br><span class="line">+ 无序列表项 二</span><br><span class="line">- 无序列表项 三</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<ul>
+<li>无序列表项 一</li>
+</ul>
+<ul>
+<li>无序列表项 二</li>
+</ul>
+<ul>
+<li><p>无序列表项 三</p>
+</li>
+<li><p><strong>有序列表</strong></p>
+</li>
+</ul>
+<p>有序列表则使用数字接着一个英文句点。</p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表项 一</span><br><span class="line">2. 有序列表项 二</span><br><span class="line">3. 有序列表项 三</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<ol>
+<li>有序列表项 一</li>
+<li>有序列表项 二</li>
+<li>有序列表项 三</li>
+</ol>
+<ul>
+<li><strong>定义型列表表</strong></li>
+</ul>
+<p>语法说明：</p>
+<blockquote>
+<p>定义型列表由名词和解释组成。一行写上定义，紧跟一行写上解释。解释的写法:紧跟一个缩进(Tab)</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Markdown</span><br><span class="line">:    轻量级文本标记语言，可以转换成html，pdf等格式（左侧有一个可见的冒号和四个不可见的空格）</span><br><span class="line"></span><br><span class="line">代码块 2</span><br><span class="line">:    这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）</span><br><span class="line"></span><br><span class="line">        代码块（左侧有八个不可见的空格）</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<dl><dt>Markdown</dt><dd>轻量级文本标记语言，可以转换成 html，pdf 等格式（左侧有一个可见的冒号和四个不可见的空格）</dd></dl><dl><dt>代码块 2</dt><dd>这是代码块的定义（左侧有一个可见的冒号和四个不可见的空格）</dd></dl><pre><code>    代码块（左侧有八个不可见的空格）
+</code></pre>
+<h3 id="2-7-插入图像"><a href="#2-7-插入图像" class="headerlink" title="2.7 插入图像"></a>2.7 插入图像</h3><p>图片的创建方式与超链接相似，而且和超链接一样也有两种写法，行内式和参考式写法。</p>
+<p>语法中图片 Alt 的意思是如果图片因为某些原因不能显示，就用定义的图片 Alt 文字来代替图片。 图片 Title 则和链接中的 Title 一样，表示鼠标悬停与图片上时出现的文字。 Alt 和 Title 都不是必须的，可以省略，但建议写上。</p>
+<ul>
+<li><strong>行内式</strong></li>
+</ul>
+<p>语法说明： <code>![图片Alt](图片地址 &quot;图片Title&quot;)</code></p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html：</span><br><span class="line">![html](https://ftp.bmp.ovh/imgs/2020/10/5f1efd3128dbabbd.jpg &quot;html&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p>html：<br><img src="https://ftp.bmp.ovh/imgs/2020/10/5f1efd3128dbabbd.jpg" alt="html" title="html"></p>
+<ul>
+<li><strong>参考式</strong></li>
+</ul>
+<p>语法说明：</p>
+<p>在文档要插入图片的地方写<code>![图片Alt][标记]</code></p>
+<p>在文档的最后写上<code>[标记]:图片地址 &quot;Title&quot;</code></p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JavaScript：</span><br><span class="line">![JavaScript][study]</span><br><span class="line"></span><br><span class="line">[study]:https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1603256953783&amp;di=a2e950fa6caecf02298b626c4c4e75a8&amp;imgtype=0&amp;src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-41f5ffb084dc04c3db2e38989056f52b_1200x500.jpg &quot;JavaScript&quot;</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p>JavaScript：</p>
+<center>![JavaScript][study]</center>
+
+<h3 id="2-8-多级引用"><a href="#2-8-多级引用" class="headerlink" title="2.8 多级引用"></a>2.8 多级引用</h3><p>语法说明：</p>
+<p>引用需要在被引用的文本前加上&gt;符号和空格，允许多层嵌套，也允许你偷懒只在整个段落的第一行最前面加上 &gt; 。</p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 请问 Markdwon 怎么用？ - 小白</span><br><span class="line">&gt;&gt; 自己看教程！ - 愤青</span><br><span class="line">&gt; 教程在哪？ - 小白</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>请问 Markdwon 怎么用？ - 小白</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>自己看教程！ - 愤青</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>教程在哪？ - 小白</p>
+</blockquote>
+<h3 id="2-9-转义字符、字体、字号、颜色"><a href="#2-9-转义字符、字体、字号、颜色" class="headerlink" title="2.9 转义字符、字体、字号、颜色"></a>2.9 转义字符、字体、字号、颜色</h3><ul>
+<li><strong>转义字符</strong></li>
+</ul>
+<p>Markdown 中的转义字符为\，转义的有：</p>
+<p>\ 反斜杠  &#96; 反引号  * 星号  _ 下划线  {} 大括号  [] 中括号  () 小括号   # 井号  + 加号  - 减号  . 英文句号  ! 感叹号</p>
+<ul>
+<li><strong>字体、字号、颜色</strong></li>
+</ul>
+<p>代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">&quot;黑体&quot;</span>&gt;</span>我是黑体字<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">&quot;微软雅黑&quot;</span>&gt;</span>我是微软雅黑<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">face</span>=<span class="string">&quot;STCAIYUN&quot;</span>&gt;</span>我是华文彩云<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;#0099ff&quot;</span> <span class="attr">size</span>=<span class="string">&quot;12&quot;</span> <span class="attr">face</span>=<span class="string">&quot;黑体&quot;</span>&gt;</span>黑体<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;gray&quot;</span> <span class="attr">size</span>=<span class="string">&quot;5&quot;</span>&gt;</span>gray<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&quot;#00ffff&quot;</span> <span class="attr">size</span>=<span class="string">&quot;3&quot;</span>&gt;</span>null<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p><font face="黑体">我是黑体字</font><br><font face="微软雅黑">我是微软雅黑</font><br><font face="STCAIYUN">我是华文彩云</font><br><font color=#0099ff size=12 face="黑体">黑体</font><br><font color=gray size=5>gray</font><br><font color=#00ffff size=3>null</font></p>
+<h2 id="三、块语法讲解"><a href="#三、块语法讲解" class="headerlink" title="三、块语法讲解"></a>三、块语法讲解</h2><h3 id="3-1-内容目录"><a href="#3-1-内容目录" class="headerlink" title="3.1 内容目录"></a>3.1 内容目录</h3><p>在段落中填写 <code>[TOC]</code> 以显示全文内容的目录结构。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[TOC]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-代码块"><a href="#3-2-代码块" class="headerlink" title="3.2 代码块"></a>3.2 代码块</h3><p>对于程序员来说这个功能是必不可少的，插入程序代码的方式有两种，一种是利用缩进(Tab), 另一种是利用 &#96; 符号（一般在 ESC 键下方）包裹代码。</p>
+<ul>
+<li><strong>行内式</strong></li>
+</ul>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C语言里的函数 `scanf()` 怎么使用？</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p>C 语言里的函数 <code>scanf()</code> 怎么使用？</p>
+<ul>
+<li><strong>缩进式多行代码</strong></li>
+</ul>
+<p>缩进 4 个空格或是 1 个制表符</p>
+<p>一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。</p>
+<p>代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&#x27;Hello world&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&#x27;Hello world&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>用六个 &#96; 包裹多行代码</strong></li>
+</ul>
+<p>代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">、、、</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello world\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">、、、</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;Hello world\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-流程图"><a href="#3-3-流程图" class="headerlink" title="3.3 流程图"></a>3.3 流程图</h3><p>代码：</p>
+<p>```flow<br>st&#x3D;&gt;start: 开始<br>io&#x3D;&gt;inputoutput: 验证<br>op&#x3D;&gt;operation: 选项<br>cond&#x3D;&gt;condition: 是 或 否？<br>sub&#x3D;&gt;subroutine: 子程序<br>e&#x3D;&gt;end: 结束</p>
+<p>st-&gt;io-&gt;op-&gt;cond<br>cond(yes)-&gt;e<br>cond(no)-&gt;sub-&gt;io<br>```</p>
+<p>显示效果：</p>
+<p><img src="https://ftp.bmp.ovh/imgs/2020/10/944a958a649f9d11.png"></p>
+<h3 id="3-4-表格"><a href="#3-4-表格" class="headerlink" title="3.4 表格"></a>3.4 表格</h3><p>语法说明：</p>
+<ol>
+<li>不管是哪种方式，第一行为表头，第二行分隔表头和主体部分，第三行开始每一行为一个表格行。</li>
+<li>列于列之间用管道符<code>|</code>隔开。原生方式的表格每一行的两边也要有管道符。</li>
+<li>第二行还可以为不同的列指定对齐方向。默认为左对齐，在<code>-</code>右边加上<code>:</code>就右对齐。</li>
+</ol>
+<p><code>-</code> 左对齐， <code>:-:</code> 中心对齐，<code>-:</code> 右对齐</p>
+<p><strong>代码：</strong></p>
+<p>简单方式写表格：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">学号|姓名|序号</span><br><span class="line">-|-|-</span><br><span class="line">小明明|男|<span class="number">75</span></span><br><span class="line">小红|女|<span class="number">79</span></span><br><span class="line">小陆|男|<span class="number">92</span></span><br></pre></td></tr></table></figure>
+
+<p>原生方式写表格：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|学号|姓名|序号|</span><br><span class="line">|-|-|-|</span><br><span class="line">|小明明|男|<span class="number">75</span>|</span><br><span class="line">|小红|女|<span class="number">79</span>|</span><br><span class="line">|小陆|男|<span class="number">92</span>|</span><br></pre></td></tr></table></figure>
+
+<p>为表格第二列指定方向：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">产品|价格</span><br><span class="line">-|-:</span><br><span class="line"><span class="title class_">Leanote</span> 高级账号|<span class="number">60</span>元/年</span><br><span class="line"><span class="title class_">Leanote</span> 超级账号|<span class="number">120</span>元/年</span><br></pre></td></tr></table></figure>
+
+<p><strong>显示效果：</strong></p>
+<p>简单方式写表格：</p>
+<table>
+<thead>
+<tr>
+<th>学号</th>
+<th>姓名</th>
+<th>序号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>小明明</td>
+<td>男</td>
+<td>75</td>
+</tr>
+<tr>
+<td>小红</td>
+<td>女</td>
+<td>79</td>
+</tr>
+<tr>
+<td>小陆</td>
+<td>男</td>
+<td>92</td>
+</tr>
+</tbody></table>
+<p>原生方式写表格：</p>
+<table>
+<thead>
+<tr>
+<th>学号</th>
+<th>姓名</th>
+<th>序号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>小明明</td>
+<td>男</td>
+<td>75</td>
+</tr>
+<tr>
+<td>小红</td>
+<td>女</td>
+<td>79</td>
+</tr>
+<tr>
+<td>小陆</td>
+<td>男</td>
+<td>92</td>
+</tr>
+</tbody></table>
+<p>为表格第二列指定方向：</p>
+<table>
+<thead>
+<tr>
+<th>产品</th>
+<th align="right">价格</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Leanote 高级账号</td>
+<td align="right">60 元&#x2F;年</td>
+</tr>
+<tr>
+<td>Leanote 超级账号</td>
+<td align="right">120 元&#x2F;年</td>
+</tr>
+</tbody></table>
+<h3 id="3-5-分隔线"><a href="#3-5-分隔线" class="headerlink" title="3.5 分隔线"></a>3.5 分隔线</h3><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">-----------</span><br></pre></td></tr></table></figure>
+
+<p>显示效果都一样：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h3 id="3-6-HTML-原始码"><a href="#3-6-HTML-原始码" class="headerlink" title="3.6 HTML 原始码"></a>3.6 HTML 原始码</h3><p>在代码区块里面， &amp; 、 &lt; 和 &gt; 会自动转成 HTML 实体，这样的方式让你非常容易使用 Markdown 插入范例用的 HTML 原始码，只需要复制贴上，剩下的 Markdown 都会帮你处理，例如：</p>
+<p>代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">第一个例子：</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer&quot;</span>&gt;</span>© 2004 Foo Corporation<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">第二个例子：</span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span> <span class="attr">rowspan</span>=<span class="string">&quot;2&quot;</span>&gt;</span>值班人员<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>星期一<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>星期二<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">th</span>&gt;</span>星期三<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>李强<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>张明<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>王平<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p>第一个例子：</p>
+<div class="footer">
+© 2004 Foo Corporation
+</div>
+
+<p>第二个例子：</p>
+<table>
+<tr>
+<th rowspan="2">值班人员</th>
+<th>星期一</th>
+<th>星期二</th>
+<th>星期三</th>
+</tr>
+<tr>
+<td>李强</td>
+<td>张明</td>
+<td>王平</td>
+</tr>
+</table>
+
+<h3 id="3-7-特殊字符"><a href="#3-7-特殊字符" class="headerlink" title="3.7 特殊字符"></a>3.7 特殊字符</h3><table>
+<thead>
+<tr>
+<th align="center">特殊字符</th>
+<th align="center">描述</th>
+<th align="center">字符的代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;nbsp;</td>
+<td align="center">空格符</td>
+<td align="center"><code>&amp;nbsp;</code></td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">小于号</td>
+<td align="center"><code>&amp;lt;</code></td>
+</tr>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">大于号</td>
+<td align="center"><code>&amp;gt;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;</td>
+<td align="center">和号</td>
+<td align="center"><code>&amp;amp;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;yen;</td>
+<td align="center">人民币</td>
+<td align="center"><code>&amp;yen;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;copy;</td>
+<td align="center">版权</td>
+<td align="center"><code>&amp;copy;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;reg;</td>
+<td align="center">注册商标</td>
+<td align="center"><code>&amp;reg;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;deg;C</td>
+<td align="center">摄氏度</td>
+<td align="center"><code>&amp;deg;C</code></td>
+</tr>
+<tr>
+<td align="center">&amp;plusmn;</td>
+<td align="center">正负号</td>
+<td align="center"><code>&amp;plusmn;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;times;</td>
+<td align="center">乘号</td>
+<td align="center"><code>&amp;times;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;divide;</td>
+<td align="center">除号</td>
+<td align="center"><code>&amp;divide;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;sup2;</td>
+<td align="center">平方（上标&amp;sup2;）</td>
+<td align="center"><code>&amp;sup2;</code></td>
+</tr>
+<tr>
+<td align="center">&amp;sup3;</td>
+<td align="center">立方（上标&amp;sup3;）</td>
+<td align="center"><code>&amp;sup3;</code></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://101.132.177.250:1122/2023/03/15/MDGrammar/" data-id="clfcbyqn300005wk8ch3g1w8u" data-title="Markdown基本语法" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/03/17/multiple_ssh/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Git配置多个SSH Key
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">工具</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/03/17/multiple_ssh/">Git配置多个SSH Key</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/15/MDGrammar/">Markdown基本语法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Arikar Wang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
