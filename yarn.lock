@@ -676,6 +676,11 @@
   "resolved" "https://registry.npmmirror.com/hexo-pagination/-/hexo-pagination-3.0.0.tgz"
   "version" "3.0.0"
 
+"hexo-plugin-gitalk@^0.2.0":
+  "integrity" "sha512-jKxO2sjyI9yTAl6KfpGisE9fzpizDKKGnKxTdx6FKr+v0O2m6lkfCk7kmgzqAcBUH2b853KAUMmvZye+Gvxzkw=="
+  "resolved" "https://registry.npmmirror.com/hexo-plugin-gitalk/-/hexo-plugin-gitalk-0.2.0.tgz"
+  "version" "0.2.0"
+
 "hexo-renderer-ejs@^2.0.0":
   "integrity" "sha512-qCjE1IdwgDgv65qyb0KMVCwCdSVAkH0vwAe9XihjvaKWkmb9dtt8DgErOdqCXn0HReSyWiEVP2BrLRj3gyHwOQ=="
   "resolved" "https://registry.npmmirror.com/hexo-renderer-ejs/-/hexo-renderer-ejs-2.0.0.tgz"

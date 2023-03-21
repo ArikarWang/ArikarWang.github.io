@@ -95,7 +95,16 @@ exclude:
 ignore:
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
+## Plugins: https://hexo.io/plugins/  gitalk:
+plugins:
+  gitalk:
+    clientID: 3bd38d826206bb37cb14
+    clientSecret: a304616de4468973622a058542d904af8d0d2d98
+    repo: arikarblog
+    owner: ArikarWang
+    admin:
+      - ArikarWang
+    distractionFreeMode: false
 ## Themes: https://hexo.io/themes/
 theme: landscape
 
