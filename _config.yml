@@ -112,6 +112,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/ArikarWang/arikarblog.git #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  repo: https://github.com/ArikarWang/arikarblog.github.io.git #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: gh-pages
   message: deploy
